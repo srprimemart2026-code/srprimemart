@@ -6,6 +6,10 @@
     <title>S.R. PRIME MART | Exclusive Online Shopping</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
@@ -16,7 +20,7 @@
     <!-- Toast Notification -->
     <div id="toast" class="fixed top-5 right-5 z-50 transform translate-x-full opacity-0 transition-all duration-300 bg-gray-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3">
         <i id="toast-icon" class="fas fa-check-circle text-green-400 text-lg"></i>
-        <span id="toast-msg" class="text-sm font-medium">Product cart-e add hoyeche!</span>
+        <span id="toast-msg" class="text-sm font-medium">প্রোডাক্ট কার্টে যোগ হয়েছে!</span>
     </div>
 
     <!-- Navigation Header -->
@@ -40,7 +44,7 @@
                 <!-- Search Bar -->
                 <div class="flex-1 max-w-md hidden md:block">
                     <div class="relative">
-                        <input type="text" id="search-input" placeholder="Product-er naam likhe khojun..." 
+                        <input type="text" id="search-input" placeholder="প্রোডাক্টের নাম লিখে খুঁজুন..." 
                             class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 text-sm transition">
                         <i class="fas fa-search absolute left-3.5 top-3 text-gray-400 text-sm"></i>
                     </div>
@@ -63,7 +67,7 @@
             <!-- Mobile Search Bar Expandable -->
             <div id="mobile-search-bar" class="hidden md:hidden pb-3">
                 <div class="relative">
-                    <input type="text" id="search-input-mobile" placeholder="Product khojun..." 
+                    <input type="text" id="search-input-mobile" placeholder="প্রোডাক্ট খুঁজুন..." 
                         class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-indigo-500 text-sm">
                     <i class="fas fa-search absolute left-3.5 top-3 text-gray-400 text-sm"></i>
                 </div>
@@ -81,13 +85,13 @@
                     S.R. PRIME MART Exclusive
                 </span>
                 <h1 class="text-2xl md:text-4xl font-black tracking-tight leading-tight">
-                    Elevate Your Daily Lifestyle & Fashion
+                    আপনার লাইফস্টাইল এবং ফ্যাশনকে করুন আরও আকর্ষণীয়
                 </h1>
                 <p class="text-gray-300 text-xs md:text-sm">
-                    Get authentic products delivered directly to your doorstep with fast shipping and Cash on Delivery across Bangladesh.
+                    খাঁটি এবং প্রিমিয়াম প্রোডাক্ট এখন ঘরে বসেই অর্ডার করুন। পুরো বাংলাদেশে ক্যাশ অন ডেলিভারি সুবিধা।
                 </p>
                 <a href="#products-section" class="mt-2 inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-full font-semibold text-xs shadow-lg transition">
-                    Explore Collection <i class="fas fa-arrow-right"></i>
+                    প্রোডাক্ট দেখুন <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -97,26 +101,26 @@
             <!-- Category Pills -->
             <div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="category-pills">
                 <button class="cat-pill px-4 py-2 rounded-full text-xs font-semibold border border-indigo-600 bg-indigo-600 text-white whitespace-nowrap" data-category="all">
-                    All Collection
+                    সকল কালেকশন
                 </button>
                 <button class="cat-pill px-4 py-2 rounded-full text-xs font-semibold border border-gray-200 bg-white text-gray-600 hover:border-gray-300 whitespace-nowrap" data-category="Jewelry & Accessories">
-                    Jewelry & Accessories
+                    জুয়েলারি ও এক্সেসরিজ
                 </button>
                 <button class="cat-pill px-4 py-2 rounded-full text-xs font-semibold border border-gray-200 bg-white text-gray-600 hover:border-gray-300 whitespace-nowrap" data-category="Men's Fashion">
-                    Men's Fashion
+                    মেন্স ফ্যাশন
                 </button>
                 <button class="cat-pill px-4 py-2 rounded-full text-xs font-semibold border border-gray-200 bg-white text-gray-600 hover:border-gray-300 whitespace-nowrap" data-category="Gadgets">
-                    Gadgets
+                    গ্যাজেটস
                 </button>
             </div>
 
             <!-- Sorting Select -->
             <div class="flex items-center gap-2 self-end md:self-auto">
-                <label for="sort-select" class="text-xs text-gray-500 font-medium">Sort:</label>
+                <label for="sort-select" class="text-xs text-gray-500 font-medium">সাজান:</label>
                 <select id="sort-select" class="bg-white border border-gray-200 text-xs font-medium rounded-xl px-3 py-2 text-gray-700 focus:outline-none focus:border-indigo-500">
-                    <option value="featured">Featured</option>
-                    <option value="low-high">Price: Low to High</option>
-                    <option value="high-low">Price: High to Low</option>
+                    <option value="featured">ফিচারড</option>
+                    <option value="low-high">দাম: কম থেকে বেশি</option>
+                    <option value="high-low">দাম: বেশি থেকে কম</option>
                 </select>
             </div>
         </section>
@@ -129,16 +133,16 @@
         <!-- Empty Search State -->
         <div id="empty-state" class="hidden text-center py-16">
             <i class="fas fa-search text-4xl text-gray-300 mb-3"></i>
-            <h3 class="text-base font-bold text-gray-700">Kono Product Pawa Jayni</h3>
-            <p class="text-xs text-gray-500 mt-1">Khub druto notun collection add kora hobe.</p>
+            <h3 class="text-base font-bold text-gray-700">কোনো প্রোডাক্ট পাওয়া যায়নি</h3>
+            <p class="text-xs text-gray-500 mt-1">অনুগ্রহ করে অন্য নামে খুঁজে দেখুন।</p>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="bg-white border-t border-gray-100 mt-auto py-8">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-xs font-semibold text-gray-600">S.R. PRIME MART &copy; 2026. All Rights Reserved.</p>
-            <p class="text-[11px] text-gray-400 mt-1">Official E-Commerce Store Powered by GitHub Pages</p>
+            <p class="text-xs font-semibold text-gray-600">S.R. PRIME MART &copy; 2026. সর্বস্বত্ব সংরক্ষিত।</p>
+            <p class="text-[11px] text-gray-400 mt-1">গিটহব পেজেস দ্বারা পরিচালিত</p>
         </div>
     </footer>
 
@@ -149,7 +153,7 @@
             <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
                 <div class="p-4 border-b border-gray-100 flex items-center justify-between">
                     <h2 class="text-base font-bold text-gray-800 flex items-center gap-2">
-                        <i class="fas fa-shopping-bag text-indigo-600"></i> Shopping Cart
+                        <i class="fas fa-shopping-bag text-indigo-600"></i> শপিং কার্ট
                     </h2>
                     <button id="close-cart-btn" class="p-2 text-gray-400 hover:text-gray-600 rounded-full">
                         <i class="fas fa-times text-base"></i>
@@ -160,19 +164,19 @@
                 </div>
                 <div class="p-4 border-t border-gray-100 bg-gray-50 space-y-3">
                     <div class="flex justify-between items-center text-xs">
-                        <span class="text-gray-500">Subtotal:</span>
-                        <span id="cart-subtotal" class="font-bold text-gray-800">৳0</span>
+                        <span class="text-gray-500">সাবটোটাল:</span>
+                        <span id="cart-subtotal" class="font-bold text-gray-800">৳০</span>
                     </div>
                     <div class="flex justify-between items-center text-xs">
-                        <span class="text-gray-500">Delivery Charge (Inside/Outside Dhaka):</span>
-                        <span class="font-semibold text-gray-700">৳60 / ৳120</span>
+                        <span class="text-gray-500">ডেলিভারি চার্জ:</span>
+                        <span class="font-semibold text-gray-700">৳৬০</span>
                     </div>
                     <div class="border-t border-gray-200 pt-2 flex justify-between items-center text-sm font-black">
-                        <span>Total:</span>
-                        <span id="cart-total" class="text-indigo-600">৳0</span>
+                        <span>মোট:</span>
+                        <span id="cart-total" class="text-indigo-600">৳০</span>
                     </div>
                     <button id="checkout-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition text-xs shadow-md">
-                        Proceed to Checkout
+                        অর্ডার সম্পন্ন করুন
                     </button>
                 </div>
             </div>
@@ -191,13 +195,13 @@
             </div>
             <div class="md:w-1/2 p-6 flex flex-col justify-between">
                 <div>
-                    <span id="qv-category" class="text-[10px] font-bold text-indigo-600 uppercase tracking-wider">Category</span>
-                    <h2 id="qv-title" class="text-lg font-bold text-gray-800 mt-1">Product Title</h2>
-                    <p id="qv-price" class="text-xl font-black text-gray-900 mt-2">৳0</p>
-                    <p id="qv-desc" class="text-xs text-gray-500 mt-3 leading-relaxed">Product description...</p>
+                    <span id="qv-category" class="text-[10px] font-bold text-indigo-600 uppercase tracking-wider">ক্যাটেগরি</span>
+                    <h2 id="qv-title" class="text-lg font-bold text-gray-800 mt-1">প্রোডাক্টের নাম</h2>
+                    <p id="qv-price" class="text-xl font-black text-gray-900 mt-2">৳০</p>
+                    <p id="qv-desc" class="text-xs text-gray-500 mt-3 leading-relaxed">বিবরণ...</p>
                 </div>
                 <button id="qv-add-btn" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl text-xs transition">
-                    Add to Cart
+                    কার্টে যোগ করুন
                 </button>
             </div>
         </div>
@@ -210,34 +214,34 @@
             <button id="close-checkout-btn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
                 <i class="fas fa-times"></i>
             </button>
-            <h2 class="text-lg font-bold text-gray-800 mb-1">Confirm Your Order</h2>
-            <p class="text-xs text-gray-500 mb-4">S.R. PRIME MART checkout section</p>
+            <h2 class="text-lg font-bold text-gray-800 mb-1">অর্ডার নিশ্চিত করুন</h2>
+            <p class="text-xs text-gray-500 mb-4">S.R. PRIME MART চেকআউট ফর্ম</p>
             <form id="checkout-form" class="space-y-3">
                 <div>
-                    <label class="text-xs font-semibold text-gray-600">Apnar Naam</label>
-                    <input type="text" required class="w-full border border-gray-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-indigo-500" placeholder="Full Name">
+                    <label class="text-xs font-semibold text-gray-600">আপনার নাম</label>
+                    <input type="text" required class="w-full border border-gray-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-indigo-500" placeholder="পুরো নাম লিখুন">
                 </div>
                 <div>
-                    <label class="text-xs font-semibold text-gray-600">Mobile Number</label>
+                    <label class="text-xs font-semibold text-gray-600">মোবাইল নম্বর</label>
                     <input type="tel" required class="w-full border border-gray-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-indigo-500" placeholder="017XXXXXXXX">
                 </div>
                 <div>
-                    <label class="text-xs font-semibold text-gray-600">Delivery Address</label>
-                    <textarea required rows="2" class="w-full border border-gray-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-indigo-500" placeholder="District, Thana, House/Road No."></textarea>
+                    <label class="text-xs font-semibold text-gray-600">ডেলিভারি ঠিকানা</label>
+                    <textarea required rows="2" class="w-full border border-gray-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-indigo-500" placeholder="জেলা, থানা, বাসা/রোড নম্বর"></textarea>
                 </div>
                 <div>
-                    <label class="text-xs font-semibold text-gray-600">Payment Option</label>
+                    <label class="text-xs font-semibold text-gray-600">পেমেন্ট পদ্ধতি</label>
                     <div class="grid grid-cols-2 gap-2 mt-1">
                         <label class="border border-gray-200 rounded-xl p-2 flex items-center gap-2 cursor-pointer text-xs font-medium hover:border-indigo-500">
-                            <input type="radio" name="payment" value="cod" checked class="text-indigo-600"> Cash on Delivery
+                            <input type="radio" name="payment" value="cod" checked class="text-indigo-600"> ক্যাশ অন ডেলিভারি
                         </label>
                         <label class="border border-gray-200 rounded-xl p-2 flex items-center gap-2 cursor-pointer text-xs font-medium hover:border-indigo-500">
-                            <input type="radio" name="payment" value="bkash" class="text-indigo-600"> bKash / Nagad
+                            <input type="radio" name="payment" value="bkash" class="text-indigo-600"> বিকাশ / নগদ
                         </label>
                     </div>
                 </div>
                 <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition text-xs shadow-lg mt-2">
-                    Place Order Now
+                    অর্ডার কনফার্ম করুন
                 </button>
             </form>
         </div>
