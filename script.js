@@ -5,36 +5,36 @@ const products = [
         title: "Men's Premium Bar Bracelet",
         price: 450,
         category: "Jewelry & Accessories",
-        badge: "Best Seller",
+        badge: "সেরা বিক্রেতা",
         image: "https://images.unsplash.com/photo-1611591475155-4282fc289e78?w=500&q=80",
-        description: "Elegant, durable stainless steel bar bracelet designed for modern men. Sweat-resistant and perfect for daily wear."
+        description: "আধুনিক পুরুষদের জন্য আকর্ষণীয় এবং টেকসই স্টেইনলেস স্টিল বার ব্রেসলেট। প্রতিদিন ব্যবহারের জন্য উপযুক্ত।"
     },
     {
         id: 2,
         title: "Classic Black Leather Wallet",
         price: 750,
         category: "Men's Fashion",
-        badge: "Popular",
+        badge: "জনপ্রিয়",
         image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&q=80",
-        description: "Genuine leather bi-fold wallet featuring multi-card slots and RFID protection."
+        description: "আসল চামড়ার তৈরি প্রিমিয়াম কোয়ালিটি ওয়ালেট, যাতে রয়েছে একাধিক কার্ড স্লট।"
     },
     {
         id: 3,
         title: "Minimalist Quartz Wristwatch",
         price: 1250,
         category: "Men's Fashion",
-        badge: "New",
+        badge: "নতুন",
         image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500&q=80",
-        description: "Sleek analog watch with scratch-resistant glass and premium strap alignment."
+        description: "আকর্ষণীয় ডিজাইন এবং স্ক্র্যাচ-প্রতিরোধী গ্লাসযুক্ত স্টাইলিশ অ্যানালগ ঘড়ি।"
     },
     {
         id: 4,
         title: "TWS Wireless Bluetooth Earbuds",
         price: 1350,
         category: "Gadgets",
-        badge: "Sale",
+        badge: "ছাড়",
         image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&q=80",
-        description: "Crystal clear sound audio quality with deep bass, low latency, and 24-hour total battery life."
+        description: "দুর্দান্ত সাউন্ড কোয়ালিটি, ডিপ বেস এবং দীর্ঘস্থায়ী ব্যাটারি লাইফযুক্ত ওয়্যারলেস ইয়ারবাডস।"
     }
 ];
 
@@ -100,7 +100,7 @@ function renderProducts() {
                 <div class="mt-4 flex items-center justify-between">
                     <span class="text-base font-black text-gray-900">৳${p.price.toLocaleString()}</span>
                     <button onclick="addToCart(${p.id})" class="bg-indigo-50 hover:bg-indigo-600 text-indigo-600 hover:text-white px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1">
-                        <i class="fas fa-plus"></i> Add
+                        <i class="fas fa-plus"></i> অ্যাড
                     </button>
                 </div>
             </div>
@@ -155,7 +155,7 @@ function setupEventListeners() {
 
     document.getElementById('checkout-btn').addEventListener('click', () => {
         if(cart.length === 0) {
-            showToast("Apnar cart empty!", "error");
+            showToast("আপনার কার্ট খালি!", "error");
             return;
         }
         closeCart();
@@ -167,7 +167,7 @@ function setupEventListeners() {
         closeCheckout();
         cart = [];
         updateCart();
-        showToast("Dhonnobad! Order safollo-bhabe grohon kora hoyeche.", "success");
+        showToast("ধন্যবাদ! আপনার অর্ডার সফলভাবে গ্রহণ করা হয়েছে।", "success");
     });
 }
 
@@ -183,7 +183,7 @@ function addToCart(productId) {
     }
 
     updateCart();
-    showToast(`"${product.title.substring(0, 18)}..." cart-e add hoyeche!`);
+    showToast(`"${product.title.substring(0, 18)}..." কার্টে যোগ করা হয়েছে!`);
 }
 
 function updateCartItemQty(productId, delta) {
@@ -205,7 +205,7 @@ function updateCart() {
         cartItemsContainer.innerHTML = `
             <div class="text-center py-12 text-gray-400">
                 <i class="fas fa-shopping-basket text-4xl mb-2"></i>
-                <p class="text-xs font-medium">Cart-e kono product nei</p>
+                <p class="text-xs font-medium">কার্টে কোনো প্রোডাক্ট নেই</p>
             </div>
         `;
     } else {
